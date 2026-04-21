@@ -1,0 +1,4 @@
+-- Nếu Admin nhập nhầm min_trust_score = -10 thì về mặt logic SQL,
+-- điều kiện kiểu như trust_score >= -10 sẽ luôn đúng với hầu hết tài xế,
+ -- vì điểm tín nhiệm thực tế thường từ 0 trở lên. Điều này làm cho bộ lọc gần như bị “vô hiệu hóa”, 
+ -- hệ thống sẽ không còn loại bỏ các tài xế điểm thấp nữa, dẫn đến việc cả những tài xế kém chất lượng vẫn được đưa vào danh sách gán đơn.
