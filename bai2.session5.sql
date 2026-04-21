@@ -1,0 +1,5 @@
+-- Lỗi ở đây là do dùng LIMIT 5 nhưng lại không sắp xếp dữ liệu trước.
+-- Trong SQL thì nếu mình không ghi ORDER BY thì hệ thống không đảm bảo thứ tự trả về, 
+-- nó có thể lấy ngẫu nhiên 5 dòng bất kỳ tùy theo cách lưu trong database. 
+-- Vì vậy mỗi lần reload app thì 5 quán hiển thị lại khác nhau, thậm chí có cả quán cũ từ năm ngoái. 
+-- Nói đơn giản là LIMIT chỉ giới hạn số lượng dòng, chứ không đảm bảo đó là 5 quán mới nhất, nên mới bị sai so với yêu cầu.
